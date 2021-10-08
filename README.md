@@ -19,6 +19,6 @@ This project can :
 
 ## Install in one command : 
 
-### 'git clone https://github.com/JCluzet/42Make.git && sh 42Make/setup.sh'
+### git clone https://github.com/JCluzet/42Make.git && sh 42Make/setup.sh
 
 👋🏼 If you encounter any problems when launching the script or if you have any questions, don't hesitate to send me an e-mail : jcluzet@student.42.fr, or leave an Issue

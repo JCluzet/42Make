@@ -8,6 +8,13 @@ This project can :
   - Create a beautiful colored makefile for your project
   - Change the SRCS wildcard's into names files (feature)
 
+FEATURE :
+
+    - Makefile auto compile on Mac AND Linux
+    - Makefile support wildcards for SRCS
+    - Makefile can support MLX add easiest
+    - Makefile find automatically your SRCS
+
 
 #### To use 42Make simply use : /42make on terminal
 

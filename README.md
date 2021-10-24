@@ -3,13 +3,13 @@
 
 This project can :
 
-  - Auto create Makefile for your 42 Project
+  - Auto create Makefile without relink for your 42 Project
   - Adding the correct flag and install the mlx in your repo
   - Find and fill automatically your SRCS when create Makefile
 
 FEATURE :
 
-    - Makefile auto compile on Mac AND Linux
+    - Makefile auto compile on Linux
     - Makefile can support MLX add easiest
 
 

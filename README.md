@@ -3,16 +3,14 @@
 
 This project can :
 
-  - Create a Makefile for your 42 Project
+  - Auto create Makefile for your 42 Project
   - Adding the correct flag and install the mlx in your repo
-  - Create a beautiful colored makefile for your project
+  - Find and fill automatically your SRCS when create Makefile
 
 FEATURE :
 
     - Makefile auto compile on Mac AND Linux
-    - Makefile can change the SRCS wildcard's into names files automatically
     - Makefile can support MLX add easiest
-    - Makefile find automatically your SRCS
 
 
 #### To use 42Make simply use : /42make on terminal

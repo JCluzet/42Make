@@ -11,9 +11,9 @@ BLUE		:= \033[1;34m
 CYAN 		:= \033[1;36m
 
 $(NAME):	$(OBJS)
-			@echo "Creating $(RED_COLOR) $(NAME) $(CLR_RMV)..."
+			@echo "\033[34mCompilation of $(NAME) ...\033[0m"
 			@$(CC) $(CFLAGS) $(INCS) $(SRCS) -o $(NAME)
-			@echo "$(GREEN)Compilation $(YELLOW)of $(RED) $(NAME) $(BLUE)done$(CLR_RMV)"
+			@echo "\033[32m$(NAME) created\n\033[0m"
 
 all:		$(NAME)
 

@@ -20,12 +20,12 @@ all:		$(NAME)
 bonus:		all
 
 clean:
-			@ echo "Deleting $(CYAN)philo $(CLR_RMV)objs ..."
+			@ echo "Deleting $(CYAN)$(NAME) $(CLR_RMV)objs ..."
 			@ $(RM) $(OBJS)
 			@ rm -rf $(BUILD_DIR)
 
 fclean:		clean
-			@ echo "Deleting $(CYAN)philo $(CLR_RMV)binary ..."
+			@ echo "Deleting $(CYAN)$(NAME) $(CLR_RMV)binary ..."
 			@ $(RM) $(NAME)
 
 re:			fclean all

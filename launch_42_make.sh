@@ -197,7 +197,7 @@ printf "\033[0;32m7. \033[mNow it's time to setup auto all your \033[0;32mSRCS\0
 
 printf "SRCS        :=      " >> Makefile_temp
 
-for f in $(find . -name '*.c' -prune -o -path \*mlx\* -prune -prune -o -path \*mlx_linux\* -prune)
+for f in $(find . -name '*.c' -o -name "*.cpp" -prune -o -path \*mlx\* -prune -prune -o -path \*mlx_linux\* -prune)
 do 
 if [[ $f != *"mlx" ]] && [[ $f != *"mlx_linux" ]];
     then 

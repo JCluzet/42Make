@@ -124,8 +124,8 @@ then
 else
     printf "BIMLX       := OFF\n" >> Makefile_temp
 fi
-printf "CC          := clang\n" >> Makefile_temp
-printf "RM		    := rm -f\n" >> Makefile_temp
+header 2
+ask "\033[0;32m1. \033[mWhich compiler do you want to use ? ex : \033[0;32mgcc\033[m, \033[0;32mclang\033[m or \033[0;32mclang++\033[m" "CC"
 
 header 3
 
@@ -150,6 +150,8 @@ then
 header 5
 printf " " >> Makefile_temp
 ask "Type the flags you want to add : (ex : -readline)"
+else
+    printf "\n" >> Makefile_temp
 fi
 
 # printf "\nDFLAGS	= -MMD -MF \$(@:.o=.d)\nDATE	= 01/01/1970\nHASH	= \n\nNOVISU 	= 0 # 1 = no progress bar usefull when tty is not available\n\n" >> Makefile_temp

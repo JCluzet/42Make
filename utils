@@ -18,6 +18,9 @@ $(NAME):	$(OBJS)
 
 all:		$(NAME)
 
+.cpp.o:
+	${CC} ${FLAGS} -c $< -o ${<:.cpp=.o}
+
 bonus:		all
 
 clean:
@@ -31,12 +34,6 @@ fclean:		clean
 
 re:			fclean all
 
-$(BUILD_DIR):
-			@ echo "Creating $(RED) $(NAME) $(CLR_RMV)..."
-			@ mkdir $(NAME) $(DIRS)
-
-$(OBJ_DIR)/%.o:$(SRCS_DIR)/%.c ./incs/philo.h | $(BUILD_DIR)
-			@ echo "Compiling $(YELLOW) $< $(CLR_RMV)..."
-			@ $(CC) $(CFLAGS) -c $< -o $(NAME) $(INCS)
+OBJS = ${SRCS:.cpp=.o}
 
 .PHONY:		all clean fclean re

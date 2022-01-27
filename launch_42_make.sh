@@ -143,13 +143,13 @@ then
     cxx=1
 fi
 
+
 if [ "$cxx" -eq "0" ]
 then
     printf "CC         := c++\n" >> Makefile_temp
     printf "FLAGS    := -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98\n" >> Makefile_temp
 else
     ask "\033[0;32m3. \033[mWhich compiler do you want to use ? ex : \033[0;32mgcc\033[m, \033[0;32mclang\033[m" "CC"
-    printf "CXX         := OFF\n" >> Makefile_temp
     printf "FLAGS    := -Wall -Wextra -Werror\n" >> Makefile_temp
 fi
 
@@ -162,14 +162,14 @@ fi
 
 
 
-# if yes_or_no "\033[0;32m5. \033[mDo you want to add more flags than basic -Wall -Werror -Wextra? (y / n)\n     \033[0;32m      ➢ \033[mYou don't need to add flag for mlx"
-# then
-# header 5
-# printf " " >> Makefile_temp
-# ask "Type the flags you want to add : (ex : -readline)"
-# else
-#     printf "\n" >> Makefile_temp
-# fi
+if yes_or_no "\033[0;32m5. \033[mDo you want to add more flags than basic -Wall -Werror -Wextra? (y / n)\n     \033[0;32m      ➢ \033[mYou don't need to add flag for mlx"
+then
+header 5
+printf " " >> Makefile_temp
+ask "Type the flags you want to add : (ex : -readline)"
+else
+    printf "\n" >> Makefile_temp
+fi
 
 # printf "\nDFLAGS	= -MMD -MF \$(@:.o=.d)\nDATE	= 01/01/1970\nHASH	= \n\nNOVISU 	= 0 # 1 = no progress bar usefull when tty is not available\n\n" >> Makefile_temp
 
@@ -213,14 +213,10 @@ if [[ $f != *"mlx" ]] && [[ $f != *"mlx_linux" ]] && [[ $f != *"MiniLibx" ]];
     printf "Adding \033[0;32m $(echo "$f" | cut -c 3- ) \033[m\n"
     sleep 0.2
     header 9
-    # else
-        # header 9
-        # printf "Removing "
-        # printf "\033[0;31m"
-        # echo "$(echo "$f" | cut -c 3- ) \033[mfrom SRCS"
+
 fi
 done
-if $cxx
+if [ "$cxx" -eq "0" ]
 then
     printf "\nOBJS        := \${SRCS:.cpp=.o}\n" >> Makefile_temp
     printf ".cpp.o:\n\t\${CC} \${FLAGS} -c $< -o \${<:.cpp=.o}\n" >> Makefile_temp

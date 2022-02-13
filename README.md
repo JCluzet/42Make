@@ -1,3 +1,7 @@
+
+# 42Make is now part of GradeMe ! 
+## Check out here >> github.com/jcluzet/42_GradeMe
+
 # 42Make
 42Make automates the creation of Makefile mainly for 42 student's
 

@@ -14,19 +14,16 @@ This project can :
 
 FEATURE :
 
-    - Makefile can support MLX add easiest
+    - Makefile can support .h relink 
 
 
-#### To use 42Make simply use : /42make on terminal
-
-## 42Make is a beta program made to build by asking 8 questions, a 42 simple Makefile.
+## 42Make is a beta program made to build by asking ~2 questions, a 42 simple Makefile.
 
 ### How to install 42Make on Mac ?
-#### Git Clone the project
-#### Execute setup.sh to install 42Make
+#### 42Make is not part of Grademe, no installation needed, please visit Grademe.fr
 
-## Install in one command : 
+## Launch in one command : 
 
-### git clone https://github.com/JCluzet/42Make.git && sh 42Make/setup.sh
+### Visit Grademe.fr !
 
 👋🏼 If you encounter any problems when launching the script or if you have any questions, don't hesitate to send me an e-mail : jcluzet@student.42.fr, or leave an Issue
